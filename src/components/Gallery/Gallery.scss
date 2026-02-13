@@ -1,0 +1,56 @@
+@use '../../assets/styles/mixins' as *;
+@use '../../assets/styles/variables' as *;
+
+.gallery-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0;
+  overflow: hidden;
+}
+
+.gallery {
+  width: 100%;
+  max-width: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+
+  // 🔐 Forzar altura mínima para móviles y pantallas grandes
+  min-height: 300px;
+}
+
+.gallery__image-wrapper {
+  width: 100%;
+  // ❗ Quitar height: 100% y usar min-height para evitar colapsos
+  min-height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.gallery__image {
+  width: 100%;
+  height: auto;
+  max-height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .gallery {
+    min-height: 300px; // ✅ asegúrate que no se colapse en móviles
+  }
+
+  .gallery__image-wrapper {
+    min-height: 300px;
+  }
+
+  .gallery__image {
+    max-height: 300px;
+  }
+}

@@ -1,0 +1,47 @@
+@use '../../assets/styles/mixins' as *;
+@use '../../assets/styles/variables' as *;
+
+.banner-carousel {
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.carousel-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover; // Rellena sin distorsionar en móviles
+  object-position: center;
+
+  @include atSmallestScreen {
+    height: auto;
+  }
+
+  @include atSmScreen {
+    height: auto;
+  }
+
+  @include atMdScreen {
+    max-height: 400px; // Altura limitada en medianos
+  }
+
+  @include atLgScreen {
+    max-height: 100vh; // Ocupará el 100% de la pantalla sin cortar
+    object-fit: cover; // Mantiene todo visible
+    object-position: top center; // Evita cortes en la parte superior
+  }
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  display: none; // Oculta ambas flechas
+}

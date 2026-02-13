@@ -1,0 +1,204 @@
+@use '../../assets/styles/mixins' as *;
+@use '../../assets/styles/variables' as *;
+
+.order-whatsapp-form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+ 
+ .order-whatsapp-form {
+   width: 100%;
+   max-width: 400px ; 
+   padding: 20px;
+   margin: 0 auto;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+  height: 75vh;
+  margin-top: -3rem;
+  margin-bottom: -1rem;
+
+
+  @include atSmScreen {
+    
+    }
+  
+  
+    @include atMdScreen {
+      
+    }
+  
+    @include atLgScreen {
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+      
+    }
+
+
+
+ }
+
+
+ .order-whatsapp-form h2 {
+   font-size: 24px;
+   margin-bottom: 20px;
+  color: #53627c;
+  font-weight: 300;
+ }
+
+ .form-group {
+   margin-bottom: 7px;
+ }
+
+ .label {
+   font-size: 16px;
+   margin-bottom: 5px;
+  
+ }
+
+
+ .title-input {
+  color: #53627c;
+  margin-bottom:  7px ;
+  display: block;
+ }
+
+ .input-field {
+   width: 100%;
+   padding: 10px;
+   margin-bottom: 15px;
+   font-size: 16px;
+  border: 1px solid #ccc; 
+    border-radius: 4px; 
+   box-sizing: border-box; 
+
+  
+   
+ }
+
+ .input-field:focus {
+  border: 1px solid #ccc;
+   outline: none;
+ }
+
+ .input-field::placeholder {
+   color: #999;
+ }
+
+ .checkbox-group label {
+   font-size: 14px;
+   display: flex;
+   align-items: center;
+   margin-bottom: 10px;
+ }
+
+ .checkbox-group input[type="checkbox"] {
+   margin-right: 10px;
+/*   background-color: #4EDD5E; */
+ }
+
+ .checkbox-input {
+   appearance: none;
+   width: 20px;
+   height: 20px;
+   border: 1px solid #ccc;
+   border-radius: 4px;
+   cursor: pointer;
+   margin-right: 5px;
+  
+ }
+
+ .checkbox-input:checked {
+  background-color: $main-red;
+   /* Cambia el fondo cuando la casilla está marcada */
+ }
+
+ .btn-submit {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   text-align: center;
+   
+ }
+
+ .Icon-whatsapp {
+   margin-right: 5px;
+   font-size: 1.5em;
+ /*   font-weight: bold; */
+  font-Weight: 600;
+  
+ }
+ 
+
+  .btn-submit {
+   padding: 2px 2px;
+   font-size: 16px;
+   background-color: $main-red;
+   color: #fff;
+   border: none;
+   border-radius: 4px;
+   cursor: pointer;
+   margin-top: auto;
+  box-shadow: none
+  
+ }
+
+ .btn-submit:disabled {
+   /* opacity: 0.5; */
+   cursor: not-allowed;
+  /*   background-color: #333; */
+    background-color: #D8D8D8;;
+ }
+
+ .btn-submit:hover {
+   /* background-color: #333; */
+ /*  background-color: #4EDD5E; */
+ }
+
+ .back-to-cart {
+   text-align: center;
+   margin-top: 20px;
+ }
+
+ .back-to-cart a {
+   color: #000;
+   text-decoration: underline;
+ }
+
+ .btn-secondary {
+   background-color: #f0f0f0;
+   color: #333;
+ }
+
+ .btn-secondary:hover {
+   background-color: #ccc;
+ }
+
+ .custom-title {
+   font-size: 14px;
+   font-weight: bold;
+   text-transform: uppercase;
+   
+ }
+
+ .custom-image-style {
+   width: 50px;
+   height: 50px;
+   object-fit: cover;
+ }
+
+ a.My-link {
+   cursor: pointer;
+   /* color: blue !important;  */
+   text-decoration: none;
+   /* font-size: 20px; */
+   font-weight: 700;
+ }
+
+ a.My-link:hover {
+  text-decoration: underline;
+  color:$link-hover
+ }

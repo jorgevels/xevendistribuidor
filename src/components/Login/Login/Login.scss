@@ -1,0 +1,68 @@
+@use '../../../assets/styles/mixins' as *;
+@use '../../../assets/styles/variables' as *;
+.login__container {
+  text-align: center;
+  min-height: 60vh;
+}
+
+
+.login__content {
+  background: #fff;
+  box-shadow: 0 1px 11px rgba(0, 0, 0, 0.27);
+  border-radius: 2px;
+  min-width: 85vw;
+  display: inline-block;
+  margin-top: 30px;
+  vertical-align: middle;
+  position: relative;
+  padding: 35px;
+  
+
+  @include atMdScreen {
+     
+      min-width: 50vw;
+    }
+  
+    @include atLgScreen {
+      min-width: 50vw;
+     
+    }
+}
+.social__login {
+ 
+  
+}
+
+.social-btn {
+  margin-bottom: 15px;
+  font-weight: 400;
+  font-size: 16px;
+  
+ 
+}
+
+.social-btn img {
+  height: 32px;
+  float: left;
+  margin-top: 6px;
+  /* line-height: 45px;
+  justify-content: center; */
+}
+
+.social-btn.google {
+  margin-top: 7px;
+  line-height: 45px;
+}
+
+.signup-link {
+  color: rgba(0, 0, 0, 0.65);
+  font-size: 14px;
+}
+
+.login__title {
+  font-size: 1.5em;
+  font-weight: 500;
+  margin-top: 0;
+  margin-bottom: 30px;
+  color: rgba(0, 0, 0, 0.65);
+}

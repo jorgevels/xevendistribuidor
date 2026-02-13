@@ -1,0 +1,48 @@
+@use '../../assets/styles/mixins' as *;
+@use '../../assets/styles/variables' as *;
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .title__line {
+    width: 20%;
+    height: 0.09px;
+    background: $line-color;
+
+    @include atMdScreen {
+      width: 40%;
+    }
+
+    @include atLgScreen {
+      width: 70%;
+    }
+  }
+
+  .title__heading {
+    font-family: 'Roboto', sans-serif;
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+ /*    font-size: 0.8rem; */
+    font-size: 18px;
+/*     font-size: 14px; 
+    font-weight: 700;
+   /*  font-weight: 400; */
+    font-weight: bold;
+  /*   line-height: 25px; */
+    line-height: 22px;
+    
+    /* color: #333333; */
+
+    /* @include atMdScreen {
+      font-size: 1.5rem;
+    }
+        @include atLgScreen {
+          font-size: 1.5rem;
+        } */
+       /*  margin-top: 1.5rem; */
+                
+                
+  }
+}

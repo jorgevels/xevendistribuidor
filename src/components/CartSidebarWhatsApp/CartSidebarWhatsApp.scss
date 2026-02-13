@@ -1,0 +1,182 @@
+@use '../../assets/styles/mixins' as *;
+@use '../../assets/styles/variables' as *;
+.cart-overlay {
+  background: rgba(0, 0, 0, 0.6);
+  position: fixed;
+  top: 65px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+/*   z-index: 111; */
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.2s ease-in-out;
+
+  @include atMdScreen {
+    top: 65px;
+  }
+
+  &--show {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.btn-whatsapp {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  justify-content: center;
+  font-weight: 700;
+  /* font-size: 16px; */
+}
+
+.btn-whatsapp:hover {
+  background-color: #128c7e;
+  color: #fff;
+  cursor: pointer;
+}
+
+
+
+.Icon-whatsapp {
+  margin-right: 5px;
+  /* height: 20px;
+  width: auto; */
+  font-size: 1.5em;
+  font-weight: 700;
+  /* Ajusta el margen entre el icono y el texto según sea necesario */
+}
+
+.cart-sidebar {
+  background: #fff;
+  position: absolute;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  padding: 1rem 2rem 5rem 2rem;
+  transform: translateX(100%);
+  transition: transform 0.2s ease-in-out;
+  z-index: 888;
+ /*  z-index: 1000; */
+
+  @include atMdScreen {
+    width: 20rem;
+  }
+
+  &--show {
+    transform: translateX(0);
+  }
+
+  &__heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+
+  &__title {
+    text-transform: uppercase;
+    font-size: 1.5rem;
+  }
+
+  &__close {
+    font-size: 1.2rem;
+    cursor: pointer;
+  }
+
+  &__content {
+    height: 90%;
+    overflow-y: scroll;
+
+    &::-webkit-scrollbar {
+      width: 0;
+    }
+  }
+
+  &__products {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+
+  &__product-info {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__product-image-container {
+    margin-right: 1rem;
+  }
+
+  &__product-image {
+    display: block;
+    width: 60px;
+    border-radius: 0.2rem;
+  }
+
+  &__product-name {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    .p {
+      font-weight: 500;
+        font-size: 14px;
+        line-height: 20px;
+    }
+  }
+
+  &__prices {
+    display: flex;
+    align-items: center;
+  }
+
+  &__product-price {
+    margin: 0 0.3rem;
+  }
+
+  &__delete {
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+
+  &__footer {
+   /*  margin-top: 0.5rem; */
+    margin-top: -1.5rem;
+   /*  margin-bottom: 2rem; */
+    font-size: 1.2rem;
+    background-color: white;
+    position: sticky;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+
+  &__btn-continue {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    }
+
+    &__btn-black-continue {
+  /*  margin-top: -2px;
+   height: 3rem; */
+  line-height: 40px;
+  font-size: 48px;
+  
+   
+}
+
+
+
+
+
+
+
+
+  &__empty-image {
+    width: 100%;
+    display: block;
+  }
+}

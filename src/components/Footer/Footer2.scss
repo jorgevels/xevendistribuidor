@@ -1,0 +1,151 @@
+@use '../../assets/styles/mixins' as *;
+@use '../../assets/styles/variables' as *;
+
+.site-footer {
+  padding: 2rem 0;
+  background: $footer-bg;
+    color: $grey-color;
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    /* margin-bottom: 2rem;
+ */
+    @include atSmallestScreen {
+      flex-direction: column;
+    }
+
+    &-logo-container {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+
+      img {
+        max-width: 80px; // Tamaño del logo
+        height: auto;
+
+        @include atSmallestScreen {
+            width: 50px; // Agregar margen superior en dispositivos pequeños
+          }
+      }
+    }
+
+    &-payment-info {
+      flex: 1;
+      text-align: center;
+
+      &__title {
+        font-size: 1.25rem;
+        font-weight: bold;
+      }
+      &__subtitle {
+              font-size: 1rem;
+              /* font-weight: bold; */
+            }
+
+      &__payments {
+        margin-top: 1rem;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+
+        img {
+          max-width: 60px;
+          height: auto;
+        }
+      }
+    }
+
+    &-form-container {
+      flex: 1;
+      margin-top: 1rem;
+      display: flex;
+      justify-content: center;
+      margin-bottom: 2rem !important; // Aumentamos el margen y agregamos !important
+
+      @include atSmallestScreen {
+          margin-top: 0;
+        }
+
+      form {
+        display: flex;
+        gap: 0.5rem;
+        width: 100%; // Asegura que el formulario ocupe todo el ancho disponible
+
+        .site-footer__input {
+          flex: 1;
+          padding: 0.5rem;
+          border-radius: 4px;
+          border: 1px solid #ccc;
+
+          @include atSmallestScreen {
+            margin-top: 1rem; // Agregar margen superior en dispositivos pequeños
+          }
+        }
+
+        .site-footer__btn {
+          padding: 0.5rem 1rem;
+          background: $main-red;
+          color: white;
+          border: none;
+          border-radius: 4px;
+          cursor: pointer;
+          @include atSmallestScreen {
+              margin-top: 1rem; // Agregar margen superior en dispositivos pequeños
+            }
+        }
+      }
+    }
+  }
+
+  &__contact {
+    
+        // Ocultar en dispositivos pequeños (pantallas menores a 576px)
+        @include atSmallestScreen {
+          display: none !important; // Fuerza el ocultamiento en dispositivos pequeños
+        }
+    
+        // Mostrar en pantallas medianas y más grandes (opcional, para mayor claridad)
+        @include atMdScreen {
+          display: block !important;
+        }
+      
+
+/* 
+    margin-top: 2rem;
+    text-align: center;  */
+    // Alineación centrada por defecto
+
+    @include atMdScreen {
+      text-align: left; // Alineación izquierda para pantallas medianas y grandes
+    }
+
+    &-content-title {
+      font-size: 1.25rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+    }
+
+    &-content-text {
+      margin: 0.25rem 0;
+    }
+  }
+
+  &__footer {
+    margin-top: 1rem;
+    text-align: center;
+
+    &-rights {
+      font-size: 0.875rem;
+      margin-bottom: 1rem;
+    }
+
+    &-social {
+      display: flex;
+      justify-content: center;
+      gap: 0.5rem;
+    }
+  }
+}

@@ -1,0 +1,108 @@
+@use '../../../assets/styles/mixins' as *;
+@use '../../../assets/styles/variables' as *;
+.singleProduct {
+  border-bottom: 1px solid $border-color;
+  padding-top: 1rem; // Añade espacio en la parte superior
+
+  &__title {
+    text-transform: capitalize;
+    font-size: 1rem;
+    margin-bottom: 0;
+  }
+
+        .singleProduct__desc h1,
+        .singleProduct__desc h2,
+        .singleProduct__desc h3,
+        .singleProduct__desc h4,
+        .singleProduct__desc h5,
+        .singleProduct__desc h6 {
+          text-align: left;
+        }
+
+        .text-left {
+          text-align: left;
+        }
+
+  &__brand {
+    margin-bottom: 1rem;
+
+    &--span {
+      font-size: 1rem;
+      font-weight: 600;
+      margin-right: 0.8rem;
+    }
+  }
+
+  &__price {
+    font-size: 1rem;
+    color: $main-black;
+  }
+
+  &__desc {
+    color: $text-color;
+    font-size: 0.9rem;
+    margin: 1rem 0 1.5rem 0;
+    text-align: justify;
+    width: 100%;
+  }
+
+  .productHeader {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem; // Espacio entre el encabezado y los detalles del producto
+  }
+
+  .goBack {
+    cursor: pointer;
+    margin-right: 10px; // Espacio entre la flecha y el título
+  }
+
+  .productDetails {
+    display: flex;
+    align-items: flex-start; // Alinea los detalles del producto arriba
+  }
+
+  .productImage {
+    position: relative;
+    width: 300px; // Ancho de la imagen del producto
+    margin-right: 20px; // Espacio entre la imagen y la información del producto
+  }
+
+  .productImage img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .goBackOverlay {
+    position: absolute;
+    top: 10px; // Ajusta la posición verticalmente según necesites
+    left: 10px; // Ajusta la posición horizontalmente según necesites
+    z-index: 10; // Asegura que esté por encima de la imagen
+    cursor: pointer;
+    color: $main-black; // Color de la flecha
+    font-size: 24px; // Tamaño de la flecha
+    background: rgba(255, 255, 255, 0.8); // Fondo transparente para mejorar visibilidad
+    padding: 10px; // Espaciado dentro del contenedor de la flecha
+    border-radius: 50%; // Añade borde redondeado
+    transition: background-color 0.3s ease; // Transición suave para el cambio de color de fondo al pasar el ratón
+
+    &:hover {
+      background-color: rgba($main-black, 0.1); // Cambia el color de fondo al pasar el ratón
+    }
+  }
+
+  .btn {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 1rem; // Espacio entre el contenido y el botón
+  }
+
+  .btn:hover {
+    background-color: #0056b3;
+  }
+}

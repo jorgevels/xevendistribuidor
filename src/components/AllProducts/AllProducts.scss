@@ -1,0 +1,16 @@
+@use '../../assets/styles/mixins' as *;
+@use '../../assets/styles/variables' as *;
+
+.container  {
+   /* width: 100%;
+  position: relative; */
+    overflow: hidden;
+ }
+ .btn-grey {
+   margin-bottom: 10px;
+ }
+
+ .no-pt {
+   padding-top: 0 !important;
+   /* Anula el padding-top de .py-5 */
+ }

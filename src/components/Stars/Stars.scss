@@ -1,0 +1,43 @@
+@use '../../assets/styles/mixins' as *;
+@use '../../assets/styles/variables' as *;
+/* .stars {
+  color: $brown-color;
+  font-size: 0.8rem;
+} */
+
+.stars {
+  display: flex;
+  /* justify-content: flex-start; */ // Alinea las estrellas a la izquierda
+  align-items: center;
+  gap: 4px;
+
+  @include atSmallestScreen {
+    gap: 1px;
+  }
+
+  span {
+    font-size: 1.2rem;
+    color: $brown-color;
+    transition: font-size 0.2s ease-in-out;
+
+    svg {
+      display: inline-block;
+    }
+
+    @include atSmallestScreen {
+      font-size: 0.6rem;
+    }
+  }
+
+  @include atMdScreen {
+    span {
+      font-size: 1rem;
+    }
+  }
+
+  @include atLgScreen {
+    span {
+      font-size: 1.2rem;
+    }
+  }
+}

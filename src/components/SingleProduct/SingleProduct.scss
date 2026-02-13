@@ -1,0 +1,106 @@
+@use '../../assets/styles/mixins' as *;
+@use '../../assets/styles/variables' as *;
+
+.goBack {
+  cursor: pointer;
+  font-size: 20px;
+  color: #333;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 15px;
+}
+
+.goBack:hover {
+  color: $link-hover;
+  
+}
+
+.singleProduct__container {
+ /*  border: 2px solid red; */ // ✅ Mueve esto al inicio para evitar la advertencia
+
+  display: flex;
+  flex-direction: row; // Asegura que la imagen y descripción estén en fila
+  gap: 20px;
+  align-items: flex-start;
+  padding: 20px;
+  width: 100%;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+/* Imagen fija en pantallas grandes */
+.singleProduct__sticky {
+  flex: 1; // Se ajusta según el tamaño del contenedor
+  position: sticky;
+  top: 20px;
+  max-width: 400px; // Tamaño de imagen en escritorio
+
+  @media (max-width: 768px) {
+    position: relative;
+    max-width: 90%;
+    margin-bottom: 20px;
+  }
+
+  /* 🛠 Ver borde */
+ /*  border: 2px solid blue; */ // Temporal, solo para ver la imagen
+}
+
+/* Contenedor de la descripción */
+.singleProduct__scrollable {
+  flex: 2; // Se expande en el espacio restante
+  max-height: 80vh;
+  overflow-y: auto;
+  padding-right: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  @media (max-width: 768px) {
+    max-height: none;
+    width: 100%;
+    padding-right: 0;
+    text-align: center;
+  }
+
+  /* 🛠 Ver borde */
+  /* border: 2px solid green; */ // Temporal, solo para ver la descripción
+}
+
+/* Alinear texto a la izquierda */
+/* .singleProduct__title, */
+.singleProduct__price,
+.singleProduct__brand,
+.singleProduct__description {
+  text-align: left;
+
+  @media (max-width: 768px) {
+    text-align: center;
+  }
+}
+
+
+.singleProduct__info {
+  display: flex;
+  flex-direction: column; // Por defecto en pantallas grandes
+  align-items: flex-start; // Alinear todo a la izquierda
+  gap: 5px; // Espacio entre elementos
+
+  @media (max-width: 768px) {
+    display: flex;
+    flex-direction: row; // En móviles, todo en una fila
+    flex-wrap: wrap; // Permite que los elementos se ajusten si es necesario
+    justify-content: flex-start;
+    align-items: center; // Asegura que todos estén alineados en la misma altura
+    gap: 10px; // Espacio entre elementos en móvil
+  }
+}
+
+// Asegurar alineación para cada elemento
+.singleProduct__title,
+.singleProduct__brand,
+.singleProduct__price,
+.stars {
+  text-align: left;
+}

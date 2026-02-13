@@ -1,0 +1,200 @@
+@use '../../assets/styles/mixins' as *;
+@use '../../assets/styles/variables' as *;
+
+// ===================================
+// SITE HEADER
+// ===================================
+.site-header {
+  padding: 0.7rem 0;
+  border-bottom: 1px solid $border-color;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 111;
+  background: $main-white;
+
+  .site-header__icon-btn {
+      color: $main-black;
+  
+      a {
+        color: inherit;
+        display: flex;
+        align-items: center;
+      }
+  
+      &:hover {
+        color: $main-red;
+      }
+    }
+  // --------------------------
+  // NAVBAR
+  // --------------------------
+  &__navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 3rem;
+  }
+
+  // --------------------------
+  // LEFT (LOGO)
+  // --------------------------
+  &__left {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  &__logo-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+  }
+
+  &__logo {
+    width: auto;
+    height: 42px;
+
+    @include atSmScreen {
+      height: 48px;
+    }
+
+    @include atMdScreen {
+      height: 54px;
+    }
+
+    @include atLgScreen {
+      height: 60px;
+    }
+
+    @include atXLScreen {
+      height: 62px;
+    }
+  }
+
+  &__logo-text {
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+    color: $main-black;
+    font-size: 0.9rem;
+
+    @include atSmScreen {
+      font-size: 1rem;
+    }
+
+    @include atMdScreen {
+      font-size: 1.2rem;
+    }
+  }
+
+  // --------------------------
+  // NAV LINKS (DESKTOP)
+  // --------------------------
+  &__links {
+    display: none;
+
+    @include atLgScreen {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+    }
+  }
+
+  &__link {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+    color: $main-black;
+    text-transform: uppercase;
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: $main-red;
+    }
+
+    @include atXLScreen {
+      font-size: 1rem;
+    }
+  }
+
+  // --------------------------
+  // RIGHT (ICONS & ACTIONS)
+  // --------------------------
+  &__right {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    @include atSmScreen {
+      gap: 1.2rem;
+    }
+
+    @include atMdScreen {
+      gap: 1.6rem;
+    }
+  }
+
+  // --------------------------
+  // ICON LIST
+  // --------------------------
+  &__icons-list {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  // --------------------------
+  // ICON BUTTON (BASE)
+  // --------------------------
+  &__icon-btn {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    cursor: pointer;
+    color: $main-black;
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: $main-red;
+    }
+
+    @include atMdScreen {
+      font-size: 1.6rem;
+    }
+  }
+
+  // --------------------------
+  // CART BADGE
+  // --------------------------
+  &__cart-count {
+    position: absolute;
+    top: -6px;
+    right: -8px;
+    background: $main-red;
+    color: #fff;
+    font-size: 0.7rem;
+    width: 18px;
+    height: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+  }
+
+  // --------------------------
+  // TOGGLE MENU (MOBILE)
+  // --------------------------
+  &__toggle {
+    font-size: 1.4rem;
+
+    @include atLgScreen {
+      display: none;
+    }
+  }
+}

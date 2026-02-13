@@ -1,0 +1,33 @@
+.blur-up-image-container {
+  position: relative; // Permitir superposición de imágenes
+  width: 100%; // Ajustar al ancho del contenedor
+  height: auto; // Ajustar la altura automáticamente
+}
+
+.blur-up-image-banner {
+/*   width: 100%; */ // Ajustar al ancho del contenedor
+ /*  height: auto; */ // Mantener proporciones
+display: block;
+  width: 80%;
+  min-height: 200px;
+  object-fit: contain;
+  margin: 0 auto;
+  filter: blur(20px); // Filtro de desenfoque al inicio
+  transition: filter 1s ease; // Transición suave para eliminar el desenfoque
+}
+
+.clear {
+  filter: none; // Eliminar el desenfoque cuando esté cargada
+}
+
+.blur-up-image {
+  transition: filter 1s ease; // Transición suave para eliminar el desenfoque
+}
+
+.blurred {
+  filter: blur(20px); // Comienza con desenfoque
+}
+
+.clear {
+  filter: none; // Elimina el desenfoque cuando está cargada
+}

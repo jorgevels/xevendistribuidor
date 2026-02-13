@@ -1,0 +1,32 @@
+.blur-up-image__container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.blur-up-image {
+  width: 100%;
+  height: auto;
+  max-height: 100%;
+  object-fit: contain;
+  display: block;
+  transition: filter 0.3s ease;
+}
+
+.blurred {
+  filter: blur(10px);
+}
+
+.clear {
+  filter: none;
+}
+
+.blur-up-image__fallback {
+  width: 100%;
+  text-align: center;
+  padding: 2rem;
+  font-size: 1.1rem;
+  color: #999;
+}

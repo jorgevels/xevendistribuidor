@@ -1,0 +1,35 @@
+.inline-block {
+  display: inline-block;
+}
+
+.img {
+  height: 24px;
+  width: 24px;
+}
+.h-8 {
+  height: 1.5rem; // Puedes ajustar el valor según tus necesidades
+}
+
+.w-8 {
+  width: 1.5rem; // Puedes ajustar el valor según tus necesidades
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.rounded-full {
+  border-radius: 9999px; // Un valor alto para simular un círculo
+}
+
+.w-full {
+  width: 100%;
+}
+
+.object-cover {
+  object-fit: cover;
+}

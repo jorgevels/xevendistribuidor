@@ -1,0 +1,36 @@
+@use '../../assets/styles/mixins' as *;
+@use '../../assets/styles/variables' as *;
+
+.product-banner {
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+
+.blur-up-image-banner {
+  width: 100%;
+  height: auto;
+  object-fit: cover; // Rellena el contenedor sin distorsionar la imagen
+  object-position: center; // Mantiene la imagen centrada
+
+  // Ajustes para pantallas más pequeñas
+  @include atSmallestScreen {
+    /* object-fit: contain; */ // Ajusta la imagen sin que se corte
+    height: 100%; // Asegura que la imagen ocupe toda la altura del contenedor sin distorsión
+  }
+
+  @include atSmScreen {
+   /*  object-fit: contain; */ // Mantén el mismo comportamiento en pantallas pequeñas
+    height: 100%; // La imagen ajustada al contenedor
+  }
+
+  @include atMdScreen {
+    object-fit: cover; // Vuelve a 'cover' en pantallas medianas
+    max-height: 400px; // Limita la altura en pantallas medianas
+  }
+
+  @include atLgScreen {
+    object-fit: cover; // 'cover' en pantallas grandes
+    max-height: 400px; // Limita la altura en pantallas grandes
+  }
+}

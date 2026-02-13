@@ -1,0 +1,25 @@
+@use '../../assets/styles/mixins' as *;
+@use '../../assets/styles/variables' as *;
+
+.image {
+      background-size: cover;
+      background-position: center;
+      width: 100%;
+      /* Aseguramos que ocupe todo el ancho disponible */
+      height: 300px;
+      /* Ajustamos la altura para una mejor visualización */
+}
+
+@media (max-width: 768px) {
+
+      /* Dispositivos móviles */
+      .image {
+            height: 200px;
+            /* Altura ajustada para móviles */
+      }
+}
+
+.no-pt {
+      padding-top: 0 !important;
+      /* Anula el padding-top de .py-5 */
+}

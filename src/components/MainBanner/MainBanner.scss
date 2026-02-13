@@ -1,0 +1,105 @@
+// Importa mixins desde la carpeta de estilos en la carpeta de activos
+@use '../../assets/styles/mixins' as *;
+@use '../../assets/styles/variables' as *;
+
+.banner {
+  min-height: 20vh;
+  position: relative;
+  /* background-image: url('../../assets/images/BANNER_SEN_INTIMO_NAVIDAD_NOV2024-01.jpg'); */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  object-fit: contain;
+
+  @include atMdScreen {
+    min-height: 50vh;
+  }
+
+  @include atLgScreen {
+    min-height: 60vh;
+  }
+
+  @include atLgScreen {
+    /* min-height: calc(100vh - 88px); */
+  }
+
+  &__hero {
+    padding: 0 2rem;
+    text-align: right;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(0, 15%);
+    animation: fadeInRight 1s ease forwards;
+
+    @include atMdScreen {
+      transform: translate(-20%, 15%);
+    }
+
+    @include atXLScreen {
+      transform: translate(-20%, 15%);
+    }
+  }
+
+  &__title {
+    margin-top: 2rem;
+    font-size: 1rem;
+    text-transform: capitalize;
+    margin-bottom: 1rem;
+    opacity: 0;
+    position: relative;
+    animation: slideInDown 1s ease forwards;
+
+    @include atMdScreen {
+      font-size: 2rem;
+    }
+
+    @include atXLScreen {
+      font-size: 3rem;
+    }
+  }
+
+  .btn {
+    font-size: 0.8rem;
+    transform: scale(0);
+    animation: scaleUp 0.5s ease forwards;
+
+    &:hover {
+      background-color: #59B4A5;
+    }
+  }
+
+  @keyframes fadeInRight {
+    0% {
+      opacity: 0;
+      transform: translateX(50px);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes slideInDown {
+    0% {
+      opacity: 0;
+      transform: translateY(-50px);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes scaleUp {
+    0% {
+      transform: scale(0);
+    }
+
+    100% {
+      transform: scale(1);
+    }
+  }
+}

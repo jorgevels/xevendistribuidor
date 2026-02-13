@@ -1,0 +1,70 @@
+
+
+
+.category {
+  position: relative;
+  overflow: hidden;
+
+  &:hover &__btn {
+    bottom: 5%;
+    opacity: 1;
+  }
+
+ h3 {
+      margin-top: 10px;
+      font-size: 12px;
+    }
+
+  &__image {
+    width: 82px;
+    height: 82px;
+    border-radius: 50%;
+    height: auto;
+    padding: 5px;
+    stroke: #48ac98;
+    margin: 5px;
+
+      h3 {
+          margin-top: 10px;
+          font-size: 12px;
+        }
+
+      @mixin atSmallestScreen {
+          
+        }
+      
+        @mixin atSmScreen {
+          
+      
+        }
+      
+        @mixin atMdScreen { //768
+          /* width: 100%; */
+        }
+      
+        @mixin atLgScreen {
+        width: 100%;
+        }
+      
+        @mixin atXLScreen {
+          width: 100%;
+        }
+  }
+
+    
+
+  /* &__btn {
+    position: absolute;
+    bottom: -10%;
+    left: 5%;
+    width: 90%;
+    background-color: #4EDD5E;
+    color: #fff;
+    opacity: 0;
+    transition: all 0.3s linear;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  } */
+
+}

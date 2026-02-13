@@ -1,0 +1,18 @@
+
+
+@use '../../assets/styles/mixins' as *;
+@use '../../assets/styles/variables' as *;
+
+/* .container  {
+   
+    overflow: hidden;
+ } */
+.py-5 {
+padding-top: 0.1rem !important;;
+
+     
+   }
+.swiper {
+   --swiper-theme-color: $main-red !important;
+   /* Rojo principal */
+}
