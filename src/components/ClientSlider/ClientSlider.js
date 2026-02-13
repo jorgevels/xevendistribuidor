@@ -1,8 +1,6 @@
 import Slider from "react-slick";
-import clientImg1 from "../../assets/images/client/1.png";
-import clientImg2 from "../../assets/images/client/2.png";
-/* mport clientImg3 from "../../assets/images/client/3.png";
-import clientImg4 from "../../assets/images/client/4.png"; */
+import { default as clientImg1, default as clientImg3 } from "../../assets/images/client/1.png";
+import { default as clientImg2, default as clientImg4 } from "../../assets/images/client/2.png";
 import Title from "../Title/Title";
 import "./ClientSlider.scss";
 
@@ -56,7 +54,12 @@ const ClientSlider = () => {
           <div className="client-image-container">
             <img className="client-image" src={clientImg2} alt="client logo" />
           </div>
-          
+          <div className="client-image-container">
+            <img className="client-image" src={clientImg3} alt="client logo" />
+          </div>
+          <div className="client-image-container">
+            <img className="client-image" src={clientImg4} alt="client logo" />
+          </div>
         </Slider>
       </div>
     </section>
