@@ -51,7 +51,7 @@ const SingleProduct = ({ singleProduct }) => {
               <SingleProductInfo
                 name={name}
                 brand={brand}
-                price={price}
+                /* price={price} */
                 stars={stars}
                 description={description}
                 id={id}

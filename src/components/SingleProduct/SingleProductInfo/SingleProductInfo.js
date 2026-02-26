@@ -1,7 +1,6 @@
 import ReactMarkdown from "react-markdown";
 import { useDispatch } from "react-redux";
 import { useHistory } from "react-router-dom"; // Importa useHistory de react-router-dom
-import { formatPrice } from "../../../utils/formatPrice";
 import Stars from "../../Stars/Stars";
 
 import "./SingleProductInfo.scss";
@@ -26,7 +25,7 @@ const SingleProductInfo = ({ name, brand, price, stars, description, id }) => {
           {" "}
           <span className="singleProduct__brand--span">MARCA:</span> {brand}
         </p>
-        <h4 className="singleProduct__price">{formatPrice(price)}</h4>
+       {/*  <h4 className="singleProduct__price">{formatPrice(price)}</h4> */}
         <Stars stars={stars} />
         <div className="singleProduct__desc">
           <ReactMarkdown
